@@ -1,0 +1,2 @@
+Invoking command in '/home/orin/test_ws/build/dynamixel_sdk_custom_interfaces': /usr/bin/cmake --build /home/orin/test_ws/build/dynamixel_sdk_custom_interfaces -- -j12 -l12
+Invoked command in '/home/orin/test_ws/build/dynamixel_sdk_custom_interfaces' returned '1': /usr/bin/cmake --build /home/orin/test_ws/build/dynamixel_sdk_custom_interfaces -- -j12 -l12

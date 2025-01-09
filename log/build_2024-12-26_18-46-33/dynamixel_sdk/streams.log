@@ -1,0 +1,5 @@
+[0.195s] Invoking command in '/home/orin/test_ws/build/dynamixel_sdk': /usr/bin/cmake --build /home/orin/test_ws/build/dynamixel_sdk -- -j12 -l12
+[2.519s] CMake Error: The current CMakeCache.txt directory /home/orin/test_ws/build/dynamixel_sdk/CMakeCache.txt is different than the directory /home/orin/work/build/dynamixel_sdk where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+[2.521s] No such file or directory
+[2.523s] CMake Error: Generator: execution of make failed. Make command was: /usr/bin/gmake -j12 -l12 && 
+[2.533s] Invoked command in '/home/orin/test_ws/build/dynamixel_sdk' returned '1': /usr/bin/cmake --build /home/orin/test_ws/build/dynamixel_sdk -- -j12 -l12

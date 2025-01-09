@@ -1,0 +1,2 @@
+Invoking command in '/home/orin/test_ws/build/turtlebot3_navigation2': /usr/bin/cmake --build /home/orin/test_ws/build/turtlebot3_navigation2 -- -j12 -l12
+Invoked command in '/home/orin/test_ws/build/turtlebot3_navigation2' returned '1': /usr/bin/cmake --build /home/orin/test_ws/build/turtlebot3_navigation2 -- -j12 -l12

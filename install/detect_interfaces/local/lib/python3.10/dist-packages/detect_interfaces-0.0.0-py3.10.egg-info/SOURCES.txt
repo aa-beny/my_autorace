@@ -1,0 +1,8 @@
+setup.py
+detect_interfaces/__init__.py
+detect_interfaces.egg-info/PKG-INFO
+detect_interfaces.egg-info/SOURCES.txt
+detect_interfaces.egg-info/dependency_links.txt
+detect_interfaces.egg-info/top_level.txt
+detect_interfaces/msg/__init__.py
+detect_interfaces/msg/_bounding_box.py

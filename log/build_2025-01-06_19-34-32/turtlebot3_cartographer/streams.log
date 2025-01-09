@@ -1,0 +1,27 @@
+[0.261s] Invoking command in '/home/orin/work/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orin/work/install/turtlebot3_teleop:/home/orin/work/install/turtlebot3_example:/home/orin/work/install/object_detection:/home/orin/work/install/detect_lane:/home/orin/work/install/core:/home/orin/work/install/control:/home/orin/work/install/camera:/opt/ros/humble /usr/local/bin/cmake --build /home/orin/work/build/turtlebot3_cartographer -- -j12 -l12
+[5.071s] Invoked command in '/home/orin/work/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orin/work/install/turtlebot3_teleop:/home/orin/work/install/turtlebot3_example:/home/orin/work/install/object_detection:/home/orin/work/install/detect_lane:/home/orin/work/install/core:/home/orin/work/install/control:/home/orin/work/install/camera:/opt/ros/humble /usr/local/bin/cmake --build /home/orin/work/build/turtlebot3_cartographer -- -j12 -l12
+[5.083s] Invoking command in '/home/orin/work/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orin/work/install/turtlebot3_teleop:/home/orin/work/install/turtlebot3_example:/home/orin/work/install/object_detection:/home/orin/work/install/detect_lane:/home/orin/work/install/core:/home/orin/work/install/control:/home/orin/work/install/camera:/opt/ros/humble /usr/local/bin/cmake --install /home/orin/work/build/turtlebot3_cartographer
+[6.008s] -- Install configuration: ""
+[6.008s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/config
+[6.009s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/config/turtlebot3_lds_2d.lua
+[6.009s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/launch
+[6.010s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/launch/cartographer.launch.py
+[6.010s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/launch/occupancy_grid.launch.py
+[6.010s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/rviz
+[6.010s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/rviz/tb3_cartographer.rviz
+[6.010s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/ament_index/resource_index/package_run_dependencies/turtlebot3_cartographer
+[6.011s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/ament_index/resource_index/parent_prefix_path/turtlebot3_cartographer
+[6.011s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/ament_prefix_path.sh
+[6.011s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/ament_prefix_path.dsv
+[6.011s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/path.sh
+[6.011s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/environment/path.dsv
+[6.011s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.bash
+[6.011s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.sh
+[6.012s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.zsh
+[6.012s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/local_setup.dsv
+[6.012s] -- Installing: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/package.dsv
+[6.013s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/ament_index/resource_index/packages/turtlebot3_cartographer
+[6.013s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/cmake/turtlebot3_cartographerConfig.cmake
+[6.013s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/cmake/turtlebot3_cartographerConfig-version.cmake
+[6.014s] -- Up-to-date: /home/orin/work/install/turtlebot3_cartographer/share/turtlebot3_cartographer/package.xml
+[6.783s] Invoked command in '/home/orin/work/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orin/work/install/turtlebot3_teleop:/home/orin/work/install/turtlebot3_example:/home/orin/work/install/object_detection:/home/orin/work/install/detect_lane:/home/orin/work/install/core:/home/orin/work/install/control:/home/orin/work/install/camera:/opt/ros/humble /usr/local/bin/cmake --install /home/orin/work/build/turtlebot3_cartographer

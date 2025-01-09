@@ -1,0 +1,45 @@
+[3.205s] Invoking command in '/home/orin/work/src/detect/object_detection': PYTHONPATH=/home/orin/work/build/object_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orin/work/install/object_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/object_detection build --build-base /home/orin/work/build/object_detection/build install --record /home/orin/work/build/object_detection/install.log --single-version-externally-managed install_data
+[3.591s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[3.591s]   warnings.warn(msg)
+[3.827s] running egg_info
+[3.864s] writing ../../../build/object_detection/object_detection.egg-info/PKG-INFO
+[3.866s] writing dependency_links to ../../../build/object_detection/object_detection.egg-info/dependency_links.txt
+[3.866s] writing entry points to ../../../build/object_detection/object_detection.egg-info/entry_points.txt
+[3.867s] writing requirements to ../../../build/object_detection/object_detection.egg-info/requires.txt
+[3.867s] writing top-level names to ../../../build/object_detection/object_detection.egg-info/top_level.txt
+[3.947s] reading manifest file '../../../build/object_detection/object_detection.egg-info/SOURCES.txt'
+[3.951s] writing manifest file '../../../build/object_detection/object_detection.egg-info/SOURCES.txt'
+[3.952s] running build
+[3.952s] running build_py
+[3.952s] copying object_detection/__init__.py -> /home/orin/work/build/object_detection/build/lib/object_detection
+[3.953s] copying object_detection/object_detection.py -> /home/orin/work/build/object_detection/build/lib/object_detection
+[3.954s] running install
+[3.964s] running install_lib
+[4.005s] running install_data
+[4.006s] copying resource/object_detection -> /home/orin/work/install/object_detection/share/ament_index/resource_index/packages
+[4.007s] copying package.xml -> /home/orin/work/install/object_detection/share/object_detection
+[4.007s] copying launch/object_detection_launch.py -> /home/orin/work/install/object_detection/share/object_detection/launch
+[4.008s] copying weights/yolov7-tiny.pt -> /home/orin/work/install/object_detection/share/object_detection/weights
+[4.046s] copying weights/yolov7.pt -> /home/orin/work/install/object_detection/share/object_detection/weights
+[4.255s] copying weights/best.pt -> /home/orin/work/install/object_detection/share/object_detection/weights
+[4.452s] copying weights/sign.pt -> /home/orin/work/install/object_detection/share/object_detection/weights
+[4.650s] copying models/experimental.py -> /home/orin/work/install/object_detection/lib/object_detection/models
+[4.651s] copying models/common.py -> /home/orin/work/install/object_detection/lib/object_detection/models
+[4.652s] copying models/yolo.py -> /home/orin/work/install/object_detection/lib/object_detection/models
+[4.653s] copying utils/general.py -> /home/orin/work/install/object_detection/lib/object_detection/utils
+[4.654s] copying utils/torch_utils.py -> /home/orin/work/install/object_detection/lib/object_detection/utils
+[4.655s] copying utils/plots.py -> /home/orin/work/install/object_detection/lib/object_detection/utils
+[4.655s] copying utils/datasets.py -> /home/orin/work/install/object_detection/lib/object_detection/utils
+[4.656s] copying utils/google_utils.py -> /home/orin/work/install/object_detection/lib/object_detection/utils
+[4.657s] copying utils/activations.py -> /home/orin/work/install/object_detection/lib/object_detection/utils
+[4.657s] copying utils/add_nms.py -> /home/orin/work/install/object_detection/lib/object_detection/utils
+[4.658s] copying utils/autoanchor.py -> /home/orin/work/install/object_detection/lib/object_detection/utils
+[4.659s] copying utils/loss.py -> /home/orin/work/install/object_detection/lib/object_detection/utils
+[4.659s] copying utils/metrics.py -> /home/orin/work/install/object_detection/lib/object_detection/utils
+[4.660s] running install_egg_info
+[4.701s] removing '/home/orin/work/install/object_detection/lib/python3.10/site-packages/object_detection-0.0.0-py3.10.egg-info' (and everything under it)
+[4.701s] Copying ../../../build/object_detection/object_detection.egg-info to /home/orin/work/install/object_detection/lib/python3.10/site-packages/object_detection-0.0.0-py3.10.egg-info
+[4.704s] running install_scripts
+[5.008s] Installing object_detection script to /home/orin/work/install/object_detection/lib/object_detection
+[5.009s] writing list of installed files to '/home/orin/work/build/object_detection/install.log'
+[5.097s] Invoked command in '/home/orin/work/src/detect/object_detection' returned '0': PYTHONPATH=/home/orin/work/build/object_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orin/work/install/object_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/object_detection build --build-base /home/orin/work/build/object_detection/build install --record /home/orin/work/build/object_detection/install.log --single-version-externally-managed install_data

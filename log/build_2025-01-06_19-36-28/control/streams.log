@@ -1,0 +1,39 @@
+[8.228s] Invoking command in '/home/orin/work/src/control': PYTHONPATH=/home/orin/work/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orin/work/install/control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /home/orin/work/build/control/build install --record /home/orin/work/build/control/install.log --single-version-externally-managed install_data
+[9.162s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[9.163s]   warnings.warn(msg)
+[9.749s] running egg_info
+[9.861s] writing ../../build/control/control.egg-info/PKG-INFO
+[9.865s] writing dependency_links to ../../build/control/control.egg-info/dependency_links.txt
+[9.867s] writing entry points to ../../build/control/control.egg-info/entry_points.txt
+[9.870s] writing requirements to ../../build/control/control.egg-info/requires.txt
+[9.872s] writing top-level names to ../../build/control/control.egg-info/top_level.txt
+[10.057s] reading manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[10.061s] writing manifest file '../../build/control/control.egg-info/SOURCES.txt'
+[10.061s] running build
+[10.061s] running build_py
+[10.062s] copying control/control_pack.py -> /home/orin/work/build/control/build/lib/control
+[10.066s] copying control/control_avoidance_v2.py -> /home/orin/work/build/control/build/lib/control
+[10.067s] copying control/__init__.py -> /home/orin/work/build/control/build/lib/control
+[10.067s] copying control/control_auto_avoidance.py -> /home/orin/work/build/control/build/lib/control
+[10.068s] copying control/control_lane.py -> /home/orin/work/build/control/build/lib/control
+[10.068s] copying control/control_avoidance.py -> /home/orin/work/build/control/build/lib/control
+[10.068s] copying control/control_pack_v2.py -> /home/orin/work/build/control/build/lib/control
+[10.070s] running install
+[10.081s] running install_lib
+[10.134s] running install_data
+[10.135s] copying resource/control -> /home/orin/work/install/control/share/ament_index/resource_index/packages
+[10.136s] copying package.xml -> /home/orin/work/install/control/share/control
+[10.137s] copying launch/avoidance_launch.py -> /home/orin/work/install/control/share/control/launch
+[10.137s] copying launch/parking_launch.py -> /home/orin/work/install/control/share/control/launch
+[10.138s] running install_egg_info
+[10.202s] removing '/home/orin/work/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info' (and everything under it)
+[10.203s] Copying ../../build/control/control.egg-info to /home/orin/work/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info
+[10.213s] running install_scripts
+[10.997s] Installing control_auto_avoidance script to /home/orin/work/install/control/lib/control
+[10.997s] Installing control_avoidance script to /home/orin/work/install/control/lib/control
+[10.997s] Installing control_avoidance_2 script to /home/orin/work/install/control/lib/control
+[10.998s] Installing control_lane script to /home/orin/work/install/control/lib/control
+[10.999s] Installing control_pack script to /home/orin/work/install/control/lib/control
+[11.000s] Installing control_pack_2 script to /home/orin/work/install/control/lib/control
+[11.001s] writing list of installed files to '/home/orin/work/build/control/install.log'
+[11.130s] Invoked command in '/home/orin/work/src/control' returned '0': PYTHONPATH=/home/orin/work/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orin/work/install/control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/control build --build-base /home/orin/work/build/control/build install --record /home/orin/work/build/control/install.log --single-version-externally-managed install_data

@@ -1,2 +1,0 @@
-Invoking command in '/home/orin/test_ws/build/detect_interfaces': /usr/bin/cmake --build /home/orin/test_ws/build/detect_interfaces -- -j12 -l12
-Invoked command in '/home/orin/test_ws/build/detect_interfaces' returned '1': /usr/bin/cmake --build /home/orin/test_ws/build/detect_interfaces -- -j12 -l12

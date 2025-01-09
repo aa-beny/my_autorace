@@ -1,2 +1,0 @@
-Invoking command in '/home/orin/test_ws/build/turtlebot3_msgs': /usr/bin/cmake --build /home/orin/test_ws/build/turtlebot3_msgs -- -j12 -l12
-Invoked command in '/home/orin/test_ws/build/turtlebot3_msgs' returned '1': /usr/bin/cmake --build /home/orin/test_ws/build/turtlebot3_msgs -- -j12 -l12

@@ -1,5 +1,0 @@
-[0.190s] Invoking command in '/home/orin/test_ws/build/turtlebot3_msgs': /usr/bin/cmake --build /home/orin/test_ws/build/turtlebot3_msgs -- -j12 -l12
-[2.505s] CMake Error: The current CMakeCache.txt directory /home/orin/test_ws/build/turtlebot3_msgs/CMakeCache.txt is different than the directory /home/orin/work/build/turtlebot3_msgs where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
-[2.506s] No such file or directory
-[2.506s] CMake Error: Generator: execution of make failed. Make command was: /usr/bin/gmake -j12 -l12 && 
-[2.553s] Invoked command in '/home/orin/test_ws/build/turtlebot3_msgs' returned '1': /usr/bin/cmake --build /home/orin/test_ws/build/turtlebot3_msgs -- -j12 -l12

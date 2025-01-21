@@ -32,12 +32,15 @@ def main():
     initial_pose = PoseStamped()
     initial_pose.header.frame_id = 'map'
     initial_pose.header.stamp = navigator.get_clock().now().to_msg()
-    initial_pose.pose.position.x = 0.466117563994017
-    initial_pose.pose.position.y = -1.3528488090433062
+    initial_pose.pose.position.x = -0.008107246182925716
+
+    initial_pose.pose.position.y = -0.012707733610123745
     initial_pose.pose.position.z = 0.0
 
-    initial_pose.pose.orientation.z = -0.23318373319475225
-    initial_pose.pose.orientation.w = 0.9724326951380021
+    initial_pose.pose.orientation.z = -0.005429295248045856
+    initial_pose.pose.orientation.w = 0.9999852612679396
+
+
 
     navigator.setInitialPose(initial_pose)
 
@@ -61,12 +64,14 @@ def main():
     goal_pose = PoseStamped()
     goal_pose.header.frame_id = 'map'
     goal_pose.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose.pose.position.x =0.7805313117801098
-    goal_pose.pose.position.y = -2.347495602155179
+    goal_pose.pose.position.x =1.8601970471961047
+    goal_pose.pose.position.y =0.39392434808987187
+
     goal_pose.pose.position.z = 0.0
 
-    goal_pose.pose.orientation.z = -0.8487107938445113
-    goal_pose.pose.orientation.w = 0.5288572476688009
+    goal_pose.pose.orientation.z =0.14952335117117424
+    goal_pose.pose.orientation.w = 0.9887581946333197
+
 
 
 

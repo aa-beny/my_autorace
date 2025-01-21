@@ -1,8 +1,6 @@
 from setuptools import find_packages, setup
-import os
-from glob import glob
 
-package_name = 'core'
+package_name = 'nv2'
 
 setup(
     name=package_name,
@@ -12,21 +10,18 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share',package_name,'launch'), glob(os.path.join('launch','*launch.[pxy][yma]'))),
-        (os.path.join('share',package_name,'config'), glob(os.path.join('config/*.yaml'))),
-        (os.path.join('share',package_name,'config'), glob(os.path.join('config/*.rviz')))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='anderson',
-    maintainer_email='anderson@todo.todo',
+    maintainer='orin',
+    maintainer_email='orin@todo.todo',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'core = core.core:main',
-            'navigation2 = core.navigation2:main',
+        'navigation  = nv2.navigation :main',
+        'example_follow_path  = nv2.example_follow_path :main',
         ],
     },
 )

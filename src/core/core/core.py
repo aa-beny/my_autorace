@@ -85,6 +85,8 @@ class node(Node):
         avoidance_launch_description = load_launch('control', 'avoidance_launch')
         self.avoidance_launch_ls.include_launch_description(avoidance_launch_description)
 
+
+        self.get_logger().info('Received: ')
     def parking_done_callback(self, msg):
         self.parking_done = msg.data
 

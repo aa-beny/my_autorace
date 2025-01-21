@@ -32,6 +32,7 @@ setup(
             'control_pack_2 = control.control_pack_v2:main',
             'control_auto_avoidance = control.control_auto_avoidance:main',
             'navigation_controller = control.navigation_controller:main',
+            'control_avoidance_v2_test = control.control_avoidance_v2_test:main',
         ],
     },
 )

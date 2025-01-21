@@ -24,12 +24,12 @@ class ControlLane(Node):
         self.kp = 0.038
         self.kd = 0.06
 
-        # self.avoidance_mode = False
-        self.avoidance_mode = True
+        self.avoidance_mode = False
+        # self.avoidance_mode = True
         self.avoidance_max_distance = 0.48
         self.lidar_error = 0
 
-        self.stop = False
+        self.stop = True
 
     def cbStop(self, msg):
         self.stop = msg.data

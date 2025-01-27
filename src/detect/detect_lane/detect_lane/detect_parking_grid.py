@@ -29,8 +29,10 @@ class ScanSubscriber(Node):
         # Convert angles to radians
         angle_min = msg.angle_min
         angle_increment = msg.angle_increment
+        # -80到-10
         index_90 = int((math.radians(100-180) - angle_min) / angle_increment)
         index_135 = int((math.radians(170-180) - angle_min) / angle_increment)
+        # 10到80
         index_minus45 = int((math.radians(-100+180) - angle_min) / angle_increment)
         index_minus90 = int((math.radians(-170+180) - angle_min) / angle_increment)
 

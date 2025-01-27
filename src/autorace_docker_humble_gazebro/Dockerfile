@@ -2,7 +2,8 @@
 # FROM dustynv/ros:humble-desktop-l4t-r35.3.1
 # FROM dustynv/ros:humble-desktop-pytorch-l4t-r35.4.1
 # FROM dustynv/ros:humble-pytorch-l4t-r35.3.1
-FROM dustynv/l4t-pytorch:r36.4.0
+#FROM dustynv/l4t-pytorch:r36.4.0
+FROM dustynv/l4t-pytorch:r36.3.0-cu124
 
 ############################## SYSTEM PARAMETERS ##############################
 # * Arguments
@@ -184,6 +185,8 @@ RUN echo "export LDS_MODEL=rplidar_a1" >> ~/.bashrc
 
 # RUN sudo apt install -y python3-rosdep
 # RUN sudo rosdep init
+RUN export PATH=/usr/local/cuda/bin:$PATH
+RUN export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
 # * Switch workspace to ~/work
 RUN sudo mkdir -p /home/"${USER}"/work

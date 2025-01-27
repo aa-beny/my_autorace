@@ -54,15 +54,15 @@ class LaserScanSubscriber(Node):
                 # self.move_and_sleep(0.0, -3.1416, 1.2)  #順180度
 
 
-                self.move_and_sleep(0.0, 3.1416, 0.6) #逆90度
-                self.move_and_sleep(0.0, -3.1416, 0.6)#順90度
-                # self.move_and_sleep(0.1, 3.4, 0.6)
-                # self.move_and_sleep(0.2, 0.0, 1.2)
-                # self.move_and_sleep(0.1, -2.75, 0.7)
-                # self.move_and_sleep(0.2, 0.0, 1.7)
-                # self.move_and_sleep(0.1, -2.6, 0.5)
-                # self.move_and_sleep(0.2, 0.0, 1.2)
-                # self.move_and_sleep(0.1, 3.0, 0.6)
+                # self.move_and_sleep(0.0, 3.1416, 0.6) #逆90度
+                # self.move_and_sleep(0.0, -3.1416, 0.6)#順90度
+                self.move_and_sleep(0.1, 3.4, 0.6)
+                self.move_and_sleep(0.2, 0.0, 1.2)
+                self.move_and_sleep(0.1, -2.75, 0.7)
+                self.move_and_sleep(0.2, 0.0, 1.7)
+                self.move_and_sleep(0.1, -2.6, 0.5)
+                self.move_and_sleep(0.2, 0.0, 1.2)
+                self.move_and_sleep(0.1, 3.0, 0.6)
                 self.move_and_sleep(0.0, 0.0, 0.1)
 
                 pub_done_msg.data = True

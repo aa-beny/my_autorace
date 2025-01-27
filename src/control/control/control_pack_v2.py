@@ -29,6 +29,7 @@ class TurnLeftNode(Node):
         self.get_logger().info('%d' % self.parling_choice.value)
 
         if self.parling_choice.value == GO_LEFT_RIGHT.LEFT.value:
+            #（持續時間） 
             self.stop_turning(1.0)
             # self.go_forward(0.9)
             self.turn_front_left(1.0)

@@ -52,7 +52,15 @@ ros2 topic echo /amcl_pose
 13 pose to pose
 ros2 run nv2 navigation
 
+14 stop car
+ros2 topic pub -1 /control/go_stop std_msgs/Bool "{data: true}"
 
+15 only lidar
+ros2 launch rplidar_ros rplidar_a1_launch.py
+
+16 controllane
+ros2 run control control_lane
+ 
 ros2 topic list
 
  ls /dev/ttyACM0
@@ -78,7 +86,7 @@ nvidia-smi
 lsmod | grep nvidia
 tegrastats
 
-
+navigation
 
 python3
 import torch
@@ -86,6 +94,17 @@ torch.cuda.is_available()
 torch.cuda.get_device_name(0)
 torch.cuda.device(0)
 quit()
+
+
+確認 NVIDIA 驅動是否安裝正確
+執行以下指令檢查 NVIDIA 驅動是否正確安裝：
+dpkg -l | grep nvidia
+如果沒有驅動程式，請使用 JetPack SDK（適用於 Jetson 設備）重新安裝驅動。
+nvidia-smi
+注意：Jetson 平台可能不支援標準的 nvidia-smi 工具，而是使用 jetson-stats 工具進行監控。安裝指令：
+sudo apt-get install jetson-stats
+jtop
+
 
 nvcc --version
 python3 -c "import torch; print('PyTorch:', torch.__version__, 'CUDA:', torch.version.cuda)"

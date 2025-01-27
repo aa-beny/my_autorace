@@ -85,6 +85,10 @@ class node(Node):
         avoidance_launch_description = load_launch('control', 'avoidance_launch')
         self.avoidance_launch_ls.include_launch_description(avoidance_launch_description)
 
+        self.navigation_launch_ls = launch.LaunchService()
+        navigation_launch_description = load_launch('control', 'navigation_launch')
+        self.navigation_launch_ls.include_launch_description(navigation_launch_description)
+
 
         self.get_logger().info('Received: ')
     def parking_done_callback(self, msg):
@@ -188,9 +192,17 @@ class node(Node):
             self.get_logger().info('Received: TUNNEL sign')
             
             # pug stop
+            # if self.yellow_fraction < 500
             stop_msg = Bool()
             stop_msg.data = True
             self.pub_stop.publish(stop_msg)
+            self.navigation_launch_ls.run()
+
+            # if self.yellow_fraction < 500
+                ## detect lane go on
+            pub_lane_msg = Bool()
+            pub_lane_msg.data = True
+            self.pub_lane_toggle.publish(pub_lane_msg)
 
         else:
             self.get_logger().info('Received: NONE sign')
@@ -276,27 +288,27 @@ class node(Node):
             self.publisher_which_line.publish(msg)
             
             ##==========================way1=================
-            # publish to go_single_line -> 雙白線
-            # msg = Int64()
-            # msg.data = 2
-            # self.publisher_which_line.publish(msg)
+            #publish to go_single_line -> 雙白線
+            msg = Int64()
+            msg.data = 2
+            self.publisher_which_line.publish(msg)
 
-            # # 執行避障程式
-            # self.avoidance_launch_ls.run()
+            # 執行避障程式
+            self.avoidance_launch_ls.run()
 
-            # ## detect lane go on
-            # pub_lane_msg = Bool()
-            # pub_lane_msg.data = True
-            # self.pub_lane_toggle.publish(pub_lane_msg)
+            ## detect lane go on
+            pub_lane_msg = Bool()
+            pub_lane_msg.data = True
+            self.pub_lane_toggle.publish(pub_lane_msg)
 
-            # #切回循線模式s
-            # self.mode = Mode.LANE
+            #切回循線模式s
+            self.mode = Mode.LANE
             #================================================
 
             # ##======================way2=====================
-            avoidance_msg = Bool()
-            avoidance_msg.data = True
-            self.pub_avoidance.publish(avoidance_msg)
+            # avoidance_msg = Bool()
+            # avoidance_msg.data = True
+            # self.pub_avoidance.publish(avoidance_msg)
             # ##==============================================
 
         elif self.mode.value == Mode.PARKING.value:

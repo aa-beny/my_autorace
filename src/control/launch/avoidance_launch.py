@@ -10,14 +10,18 @@ from ament_index_python.packages import get_package_share_directory
 def generate_launch_description():
     # control_avoidance_node = Node(
     #     package='control',
-    #     executable='control_avoidance',
+    #     executable='control_avoidance_v2_test',
+    # )
+
+    # control_avoidance_node = Node(
+    #     package='control',
+    #     executable='control_avoidance_2',
     # )
 
     control_avoidance_node = Node(
         package='control',
-        executable='control_avoidance_2',
+        executable='control_avoidance_v2_test',
     )
-
     # Create the launch description
     ld = LaunchDescription()
 

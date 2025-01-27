@@ -32,13 +32,14 @@ def main():
     initial_pose = PoseStamped()
     initial_pose.header.frame_id = 'map'
     initial_pose.header.stamp = navigator.get_clock().now().to_msg()
-    initial_pose.pose.position.x = -0.008107246182925716
+    initial_pose.pose.position.x = 0.021036141821376208
 
-    initial_pose.pose.position.y = -0.012707733610123745
+    initial_pose.pose.position.y =-0.05279567507835287
     initial_pose.pose.position.z = 0.0
 
-    initial_pose.pose.orientation.z = -0.005429295248045856
-    initial_pose.pose.orientation.w = 0.9999852612679396
+    initial_pose.pose.orientation.z = -0.0024105284404978503
+    initial_pose.pose.orientation.w =  0.9999970946720983
+
 
 
 
@@ -64,13 +65,16 @@ def main():
     goal_pose = PoseStamped()
     goal_pose.header.frame_id = 'map'
     goal_pose.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose.pose.position.x =1.8601970471961047
-    goal_pose.pose.position.y =0.39392434808987187
+    goal_pose.pose.position.x =0.7219978541105355
+    goal_pose.pose.position.y =-1.6281255664954764
+
 
     goal_pose.pose.position.z = 0.0
 
-    goal_pose.pose.orientation.z =0.14952335117117424
-    goal_pose.pose.orientation.w = 0.9887581946333197
+    goal_pose.pose.orientation.z =0.008575953877497178
+
+    goal_pose.pose.orientation.w = 0.9999632258313758
+
 
 
 
@@ -105,15 +109,18 @@ def main():
             )
 
             # Some navigation timeout to demo cancellation
-            if Duration.from_msg(feedback.navigation_time) > Duration(seconds=600.0):
-                navigator.cancelTask()
+            # if Duration.from_msg(feedback.navigation_time) > Duration(seconds=600.0):
+            #     navigator.cancelTask()
+            if Duration.from_msg(feedback.navigation_time) > Duration(seconds=20.0):
+                navigator.lifecycleShutdown()
+                exit(0)
 
             # Some navigation request change to demo preemption
-            if Duration.from_msg(feedback.navigation_time) > Duration(seconds=18.0):
-                goal_pose.pose.position.x = 0.0
-                goal_pose.pose.position.y = 0.0
-                navigator.goToPose(goal_pose)
-                print('Goal succeeded!')
+            # if Duration.from_msg(feedback.navigation_time) > Duration(seconds=18.0):
+            #     goal_pose.pose.position.x = 0.0
+            #     goal_pose.pose.position.y = 0.0
+            #     navigator.goToPose(goal_pose)
+            #     print('Goal succeeded!')
 
     # Do something depending on the return code
     result = navigator.getResult()

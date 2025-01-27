@@ -29,7 +29,7 @@ class KeyboardPublisher(Node):
             elif self.key_to_publish == '6':
                 msg.data = "Stop_Bar_sign"
             elif self.key_to_publish == '7':
-                msg.data = "Tunnel_sign"
+                msg.data = "cave"
             elif self.key_to_publish == '8':
                 msg.data = "dig"
             elif self.key_to_publish == '9':

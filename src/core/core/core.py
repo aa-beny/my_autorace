@@ -18,6 +18,7 @@ class Mode(Enum):
     INTERSECTION = 2
     OBSTACLES = 3
     PARKING = 4
+    TUNNEL = 5
 
 class GO_LEFT_RIGHT(Enum):
     LEFT = 1
@@ -53,6 +54,8 @@ class node(Node):
         self.keep_going = False
         self.parking_done = False
         self.avoidance_done = False
+
+        self.TUNNEL_done = False
 
         self.yellow_fraction = 30000 ##判斷在停車中 是否檢測到沒有黃線
         self.white_fraction = 0
@@ -190,19 +193,8 @@ class node(Node):
 
         elif msg.data == 'cave':
             self.get_logger().info('Received: TUNNEL sign')
+            self.mode = Mode.TUNNEL
             
-            # pug stop
-            # if self.yellow_fraction < 500
-            stop_msg = Bool()
-            stop_msg.data = True
-            self.pub_stop.publish(stop_msg)
-            self.navigation_launch_ls.run()
-
-            # if self.yellow_fraction < 500
-                ## detect lane go on
-            pub_lane_msg = Bool()
-            pub_lane_msg.data = True
-            self.pub_lane_toggle.publish(pub_lane_msg)
 
         else:
             self.get_logger().info('Received: NONE sign')
@@ -300,6 +292,10 @@ class node(Node):
             pub_lane_msg = Bool()
             pub_lane_msg.data = True
             self.pub_lane_toggle.publish(pub_lane_msg)
+            msg = Int64()
+            msg.data = 2
+            self.publisher_which_line.publish(msg)
+            time.sleep(3)
 
             #切回循線模式s
             self.mode = Mode.LANE
@@ -315,9 +311,9 @@ class node(Node):
             self.get_logger().info('Mode: PARKING')
 
             # ##======================way2:finish avoidance=====================
-            avoidance_msg = Bool()
-            avoidance_msg.data = False
-            self.pub_avoidance.publish(avoidance_msg)
+            # avoidance_msg = Bool()
+            # avoidance_msg.data = False
+            # self.pub_avoidance.publish(avoidance_msg)
             # ##==============================================
 
             msg = Int64()
@@ -346,6 +342,39 @@ class node(Node):
 
                 if self.white_fraction > 4000:
                     self.mode = Mode.LANE
+        elif self.mode.value == Mode.TUNNEL.value:
+            self.get_logger().info('Mode: TUNNEL')
+            pub_lane_msg = Bool()
+            pub_lane_msg.data = True
+            self.pub_lane_toggle.publish(pub_lane_msg)
+            time.sleep(2.23)
+            # pug stop
+            # if self.yellow_fraction < 500 and self.white_fraction < 500 and self.TUNNEL_done ==False:
+            # if self.yellow_fraction < 500  and self.TUNNEL_done ==False:
+         
+            stop_msg = Bool()
+            stop_msg.data = True
+            self.pub_stop.publish(stop_msg)
+
+
+            self.navigation_launch_ls.run()
+            self.TUNNEL_done == True
+            stop_msg = Bool()
+            stop_msg.data = False
+            self.pub_stop.publish(stop_msg)
+            self.get_logger().info('out')
+            if self.yellow_fraction > 4000 and self.white_fraction > 4000 and self.TUNNEL_done ==True:
+                ## detect lane go on
+                self.get_logger().info('in')
+                pub_lane_msg = Bool()
+                pub_lane_msg.data = True
+                self.pub_lane_toggle.publish(pub_lane_msg)
+
+                stop_msg = Bool()
+                stop_msg.data = False
+                self.pub_stop.publish(stop_msg)
+
+                self.mode = Mode.LANE
 
 def load_launch(launch_package, launch_name):
     launch_description = launch.LaunchDescription()

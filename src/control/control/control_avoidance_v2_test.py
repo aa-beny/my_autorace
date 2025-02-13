@@ -40,7 +40,7 @@ class LaserScanSubscriber(Node):
             distances_minus10_to_10 = msg.ranges[index_minus178:index_minus170 + 1]
             # print(distances_minus10_to_10)
             # sys.exit()
-            obstacle_detected_minus10_to_10 = any(distance < 0.35 for distance in distances_minus10_to_10)
+            obstacle_detected_minus10_to_10 = any(distance < 0.5 for distance in distances_minus10_to_10)
             # obstacle_detected_minus10_to_10 = True
             if obstacle_detected_minus10_to_10:
                 #停止循線模式
@@ -50,21 +50,52 @@ class LaserScanSubscriber(Node):
 
                 self.get_logger().info('Start Avoidance')
                 self.move_and_sleep(0.0, 0.0, 1.2)   # linear_speed, angular_speed, duration
+                self.move_and_sleep(0.0, 0.0, 1.2) 
                 # self.move_and_sleep(0.0, 3.1416, 1.2) #逆180度
                 # self.move_and_sleep(0.0, -3.1416, 1.2)  #順180度
 
 
                 # self.move_and_sleep(0.0, 3.1416, 0.6) #逆90度
                 # self.move_and_sleep(0.0, -3.1416, 0.6)#順90度
-                self.move_and_sleep(0.1, 3.4, 0.6)
-                self.move_and_sleep(0.2, 0.0, 1.2)
-                self.move_and_sleep(0.1, -2.75, 0.7)
-                self.move_and_sleep(0.2, 0.0, 1.7)
-                self.move_and_sleep(0.1, -2.6, 0.5)
-                self.move_and_sleep(0.2, 0.0, 1.2)
-                self.move_and_sleep(0.1, 3.0, 0.6)
-                self.move_and_sleep(0.0, 0.0, 0.1)
 
+                # self.move_and_sleep(0.0, 3.1416, 0.6) #逆90度
+                # self.move_and_sleep(0.2, 0.0, 1.5)
+                # self.move_and_sleep(0.0, -3.1416, 0.6)#順90度
+
+                # self.move_and_sleep(0.2, 0.0, 2.4)
+
+                # self.move_and_sleep(0.0, -3.1416, 0.6)#順90度
+                # self.move_and_sleep(0.2, 0.0, 1.3)
+                # self.move_and_sleep(0.0, 3.1416, 0.7)
+
+                # self.move_and_sleep(0.2, 0.0, 2.5)
+
+
+                # self.move_and_sleep(0.0, 1.8, 0.6) #逆90度
+                # self.move_and_sleep(0.2, 0.0, 2.0)
+                # self.move_and_sleep(0.0, -3.1416, 0.6)#順90度
+
+                # self.move_and_sleep(0.2, 0.0, 2.0)
+                #?self.move_and_sleep(0.0, 1.1, 0.7)
+
+                self.move_and_sleep(0.1, 3.4, 0.6)#左
+                self.move_and_sleep(0.2, 0.0, 1.2)#直
+                self.move_and_sleep(0.1, -2.75, 0.7)#又
+                self.move_and_sleep(0.2, 0.0, 1.7)#直
+                self.move_and_sleep(0.1, -2.6, 0.5)#又
+                self.move_and_sleep(0.2, 0.0, 1.5)#直
+                # self.move_and_sleep(0.1, 3.0, 0.6)#左
+                self.move_and_sleep(0.0, 0.0, 0.1)#停
+   
+    
+                # self.move_and_sleep(0.0, 2.0, 0.6)#順90度
+
+                # self.move_and_sleep(0.2, 0.0, 1.8)
+                # self.move_and_sleep(0.1, 0.2, 0.6)
+
+                # self.move_and_sleep(0.0, 0.0, 0.1)
+                
+                
                 pub_done_msg.data = True
                 self.publisher_done.publish(pub_done_msg)
                 raise SystemExit

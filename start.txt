@@ -1,11 +1,19 @@
 $ . setup_turtlebot.sh
 
 $ colcon build --symlink-install
-
+yolo
 $ ros2 launch object_detection object_detection_launch.py 
+
+ros2 run detect_lane key_pub_signs
 
 1. motor->
 $ ros2 launch turtlebot3_bringup robot.launch.py 
+
+1.1 keyboard
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+1.2 stop car
+ros2 topic pub -1 /control/go_stop std_msgs/Bool "{data: true}"
 
 2. detect lane
 $ ros2 launch detect_lane detect_lane_launch.py calibration:=True/False
@@ -17,6 +25,9 @@ $ ros2 topic pub -1 /detect/lane_mode std_msgs/Int64 "{data: 1}"
 $ ros2 run core core
 
 4. control lane -> after core
+ros2 run control control_lane
+
+4.1<anothher way>
 $ ros2 run control control_auto_avoidance
 
 5. traffic light
@@ -38,28 +49,22 @@ ros2 launch turtlebot3_cartographer cartographer.launch.py
 9 savemap
 ros2 run nav2_map_server map_saver_cli -f ~/work/map
 
-
 10 navigation2
 ros2 launch turtlebot3_navigation2 navigation2.launch.py map:=$HOME/work/map.yaml
 
-11 keyboard
-ros2 run teleop_twist_keyboard teleop_twist_keyboard
- 
-12 listen topic
+10.1 listen topic
 ros2 topic echo /initialpose
 ros2 topic echo /amcl_pose
 
 13 pose to pose
 ros2 run nv2 navigation
 
-14 stop car
-ros2 topic pub -1 /control/go_stop std_msgs/Bool "{data: true}"
+
 
 15 only lidar
 ros2 launch rplidar_ros rplidar_a1_launch.py
 
-16 controllane
-ros2 run control control_lane
+
  
 ros2 topic list
 
@@ -71,7 +76,8 @@ ros2 run detect_lane key_pub_signs
 
 
 
-
+ros2 topic echo /detect/yellow_fraction
+ros2 topic echo /detect/white_fraction
 
 ros2 topic list
 

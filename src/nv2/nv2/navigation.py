@@ -32,13 +32,19 @@ def main():
     initial_pose = PoseStamped()
     initial_pose.header.frame_id = 'map'
     initial_pose.header.stamp = navigator.get_clock().now().to_msg()
-    initial_pose.pose.position.x = 0.021036141821376208
+    initial_pose.pose.position.x = 0.07210646163142224
 
-    initial_pose.pose.position.y =-0.05279567507835287
+
+
+    initial_pose.pose.position.y =0.028787885135086767
+
     initial_pose.pose.position.z = 0.0
 
-    initial_pose.pose.orientation.z = -0.0024105284404978503
-    initial_pose.pose.orientation.w =  0.9999970946720983
+    initial_pose.pose.orientation.z = 0.013710588828712
+
+
+    initial_pose.pose.orientation.w = 0.9999060054594981
+
 
 
 
@@ -65,15 +71,18 @@ def main():
     goal_pose = PoseStamped()
     goal_pose.header.frame_id = 'map'
     goal_pose.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose.pose.position.x =0.7219978541105355
-    goal_pose.pose.position.y =-1.6281255664954764
+    goal_pose.pose.position.x =1.9118450724964688
+
+    goal_pose.pose.position.y =1.2787959063342231
+
 
 
     goal_pose.pose.position.z = 0.0
 
-    goal_pose.pose.orientation.z =0.008575953877497178
+    goal_pose.pose.orientation.z =0.7082675642434761
 
-    goal_pose.pose.orientation.w = 0.9999632258313758
+    goal_pose.pose.orientation.w = 0.7059440894579495
+
 
 
 
@@ -111,7 +120,7 @@ def main():
             # Some navigation timeout to demo cancellation
             # if Duration.from_msg(feedback.navigation_time) > Duration(seconds=600.0):
             #     navigator.cancelTask()
-            if Duration.from_msg(feedback.navigation_time) > Duration(seconds=20.0):
+            if Duration.from_msg(feedback.navigation_time) > Duration(seconds=35.0):
                 navigator.lifecycleShutdown()
                 exit(0)
 
